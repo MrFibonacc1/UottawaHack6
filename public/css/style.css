@@ -7,8 +7,19 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+.content-area {
+  background-color: #fff; /* White background */
+  padding: 20px; /* Padding inside the white content area */
+  margin-top: -100px; /* Space from the top */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  border-radius: 5px; /* Optional rounded corners */
+  width: 200%; /* Set the width of the white box */
+  max-width: 1200px; /* Maximum width can help on very wide screens */
+  margin-left: auto; /* Center the box horizontally */
+  margin-right: auto; /* Center the box horizontally */
+}
 body{
-    background: url("/images/1.jpg");
+    background: url("images/1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -19,7 +30,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 110vh;
-    background: rgba(39, 39, 39, 0.4);
+    /*background: rgba(39, 39, 39, 0.4);*/
 }
 .nav{
     position: fixed;
@@ -36,6 +47,16 @@ body{
     color: white;
     font-size: 25px;
     font-weight: 600;
+}
+
+.nav-info h1 {
+  color: #fff; /* Assuming you want the title white */
+  text-align: center; /* Center align the title */
+  position: absolute; /* Position it absolutely within the wrapper */
+  width: 100%; /* Full width */
+  top: 200px; /* Position it below the nav bar */
+  left: 0; /* Align to the left edge */
+  z-index: 10; /* Above the content box */
 }
 .nav-menu ul{
     display: flex;
@@ -84,7 +105,7 @@ body{
     align-items: center;
     justify-content: center;
     width: 512px;
-    height: 420px;
+    height: 520px;
     overflow: hidden;
     z-index: 2;
 }
@@ -226,6 +247,9 @@ header{
 @media only screen and (max-width: 540px) {
     .wrapper{
         min-height: 100vh;
+    }
+    .content-box {
+      margin-top: 150px; /* Increase top margin on smaller screens if necessary */
     }
     .form-box{
         width: 100%;
